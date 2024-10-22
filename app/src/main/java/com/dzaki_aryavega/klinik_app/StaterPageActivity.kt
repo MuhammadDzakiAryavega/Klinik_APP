@@ -1,6 +1,5 @@
 package com.dzaki_aryavega.klinik_app
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -10,14 +9,13 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class StaterPageActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_stater_page)
 
         val tombol1: Button = findViewById(R.id.button)
-        tombol1.setOnClickListener{
+        tombol1.setOnClickListener {
             val intent = Intent(this,PageLogin::class.java)
             startActivity(intent)
         }

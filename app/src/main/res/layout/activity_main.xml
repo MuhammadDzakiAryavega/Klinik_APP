@@ -9,17 +9,18 @@
 
 
     <LinearLayout
+        android:id="@+id/font"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#FFFFFF">
+        android:background="#DCD9D9"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="290sp"
-            android:fontFamily="@font/gilda_display"
+            android:fontFamily="serif"
             android:gravity="center"
             android:text="Self Care"
             android:textSize="34sp"
@@ -37,9 +38,9 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Loading..."
+            android:layout_marginTop="65sp"
             android:gravity="center"
-            android:textColor="#474545"
-            android:layout_marginTop="65sp"/>
+            android:text="Loading..."
+            android:textColor="#474545" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

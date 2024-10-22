@@ -7,37 +7,38 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.dzaki_aryavega.klinik_app.R
-import com.dzaki_aryavega.klinik_app.model.modelicon
 import com.dzaki_aryavega.klinik_app.model.modellistdoctor
 
-class AdapterListDoctors(
-    val itemMenuListDoctors: List<modellistdoctor>
-) : RecyclerView.Adapter<AdapterListDoctors.MyViewHolder>() {
 
-    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var imgDoctors: ImageView = itemView.findViewById(R.id.imgitemDoctors)
-        var txtNamaDoctors: TextView = itemView.findViewById(R.id.txtItemNamaDr)
-        var txtBidang: TextView = itemView.findViewById(R.id.txtItemBidangDr)
-        var txtJumlahReview: TextView = itemView.findViewById(R.id.txtItemJumlahReview)
-        var txtJumlahRating: TextView = itemView.findViewById(R.id.txtItemJumlahRating)
+class AdapterListDoctors(
+    val itemListDoctors: List<modellistdoctor>
+): RecyclerView.Adapter<AdapterListDoctors.MyviewHolder>() {
+    class MyviewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
+        var txtNamaDoktor : TextView = itemView.findViewById(R.id.txtNamaDoctor)
+        var imgDoctor : ImageView = itemView.findViewById(R.id.imgDoctor)
+        var imgBintang : ImageView = itemView.findViewById(R.id.imgBintang)
+        var txtBidang : TextView = itemView.findViewById(R.id.txtBidang)
+        var txtTotalReview : TextView = itemView.findViewById(R.id.txtJumlahReview)
+        var txtTotalRating : TextView = itemView.findViewById(R.id.txtJumlahRating)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyviewHolder {
         val nView = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_doctor, parent, false)
-        return MyViewHolder(nView)
+            .inflate(R.layout.item_doctor,parent,false)
+        return MyviewHolder(nView)
     }
 
     override fun getItemCount(): Int {
-        return itemMenuListDoctors.size
+        return itemListDoctors.size
     }
 
-    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val currentItem = itemMenuListDoctors[position]
-        holder.imgDoctors.setImageResource(currentItem.image)
-        holder.txtNamaDoctors.setText(currentItem.doctor)
+    override fun onBindViewHolder(holder: MyviewHolder, position: Int) {
+        val currentItem = itemListDoctors[position]
+        holder.txtNamaDoktor.setText(currentItem.doctor)
+        holder.imgDoctor.setImageResource(currentItem.image)
+        holder.imgBintang.setImageResource(currentItem.imagebintang)
         holder.txtBidang.setText(currentItem.bidang)
-        holder.txtJumlahReview.setText(currentItem.totalreview)
-        holder.txtJumlahRating.setText(currentItem.angkareview)
+        holder.txtTotalRating.setText(currentItem.totalreview)
+        holder.txtTotalReview.setText(currentItem.angkareview)
     }
 }

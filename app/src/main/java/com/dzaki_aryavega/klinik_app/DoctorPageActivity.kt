@@ -13,7 +13,6 @@ import com.dzaki_aryavega.klinik_app.adapter.AdapterMenuIcon
 import com.dzaki_aryavega.klinik_app.model.modelicon
 import com.dzaki_aryavega.klinik_app.model.modellistdoctor
 
-
 class DoctorPageActivity : AppCompatActivity() {
 
     private lateinit var RecyclerViewMenu : RecyclerView
@@ -44,11 +43,11 @@ class DoctorPageActivity : AppCompatActivity() {
 
         //data untuk dokter
         val menudokter = listOf(
-            modellistdoctor("Dr.Floyd Miles",R.drawable.dokter1,"Pediatrics","(123 reviews)","4.9"),
-            modellistdoctor("Dr.Guy Hawkins",R.drawable.dokter6,"Dentist","(85 reviews)","4.9"),
-            modellistdoctor("Dr.Jane Cooper",R.drawable.dokter3,"Cardiologist","(44 reviews)","4.7"),
-            modellistdoctor("Dr.Jacob Jones",R.drawable.dokter4,"Nephrologyst","(101 reviews)","5.0"),
-            modellistdoctor("Dr.Savannah Nguyen",R.drawable.dokter5,"Urologist","(168 reviews)","4.8")
+            modellistdoctor("Dr.Floyd Miles",R.drawable.dokter1,R.drawable.bintang,"Pediatrics","(123 reviews)","4.9"),
+            modellistdoctor("Dr.Guy Hawkins",R.drawable.dokter2,R.drawable.bintang,"Dentist","(85 reviews)","4.9"),
+            modellistdoctor("Dr.Jane Cooper",R.drawable.dokter3,R.drawable.bintang,"Cardiologist","(44 reviews)","4.7"),
+            modellistdoctor("Dr.Jacob Jones",R.drawable.dokter4,R.drawable.bintang,"Nephrologyst","(101 reviews)","5.0"),
+            modellistdoctor("Dr.Savannah Nguyen",R.drawable.dokter5,R.drawable.bintang,"Urologist","(168 reviews)","4.8")
         )
 
         //inisialisasi recycleview dan adapter

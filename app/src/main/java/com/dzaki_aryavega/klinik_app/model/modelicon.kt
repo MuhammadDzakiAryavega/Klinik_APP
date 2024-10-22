@@ -1,6 +1,6 @@
 package com.dzaki_aryavega.klinik_app.model
 
 data class modelicon(
-    val iconImage : Int,
+    var item : Int,
     var iconName : String
 )
